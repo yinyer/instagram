@@ -1,0 +1,15 @@
+<h1 class="title">
+	<%= @photo.title %>
+</h1>
+
+<div>
+	<%= image_tag @photo.asset.url(:medium) %>
+</div>
+
+<p class="body">
+	<%= @photo.comment %>
+</p>
+
+<div>
+	 <%= link_to "Volver", root_path %>
+</div>

@@ -1,0 +1,20 @@
+<h1>Mini-Instagram</h1>
+<h2>Fotos</h2>
+<div class="photos">
+
+  <% for photo in @photos %>
+
+    <div class="photo">
+      <%= link_to  image_tag(photo.asset.url(:thumb)), photo %> 
+      <br><span>by: <%= photo.user.email %></span>
+
+      <hr>
+    </div>
+
+  <% end %>
+
+</div>
+
+<div class="call-to-action">
+  <%= link_to "Upload your photo", new_photo_path %>
+</div>
